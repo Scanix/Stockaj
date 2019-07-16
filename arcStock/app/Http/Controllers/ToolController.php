@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ToolRequest;
 use App\Tool;
 use Illuminate\Http\Request;
 
@@ -35,9 +36,14 @@ class ToolController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ToolRequest $request)
     {
-        //
+        $tool = new Tool;
+        $tool->name = $request->input('name');
+        $tool->type = $request->input('type');
+        $tool->number = $request->input('number');
+        $tool->save();
+
     }
 
     /**

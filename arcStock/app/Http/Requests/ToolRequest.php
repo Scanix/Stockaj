@@ -13,7 +13,7 @@ class ToolRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,8 +25,22 @@ class ToolRequest extends FormRequest
     {
         return [
             'name' => 'required|unique:tools',
-            'type' => 'required|max:2',
-            'number' => 'required'
+            'type' => 'required|numeric|min:0|max:2',
+            'number' => 'required|numeric'
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'A name is required',
+            'name.unique' => 'The name must be unique',
+            'type.required'  => 'A type is required',
         ];
     }
 }
