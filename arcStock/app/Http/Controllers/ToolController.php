@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tool;
 use Illuminate\Http\Request;
 
 class ToolController extends Controller
@@ -13,7 +14,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        echo "ici la liste";
+        //
     }
 
     /**
@@ -23,7 +24,7 @@ class ToolController extends Controller
      */
     public function create()
     {
-        echo "ici l'ajout";
+        //
     }
 
     /**
@@ -40,10 +41,10 @@ class ToolController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Tool $tool)
     {
         //
     }
@@ -51,10 +52,10 @@ class ToolController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Tool $tool)
     {
         //
     }
@@ -63,10 +64,10 @@ class ToolController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tool $tool)
     {
         //
     }
@@ -74,10 +75,10 @@ class ToolController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Tool  $tool
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Tool $tool)
     {
         //
     }
