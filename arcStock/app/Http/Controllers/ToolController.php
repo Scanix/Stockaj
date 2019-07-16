@@ -14,7 +14,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        //
+        return view('tools.list');
     }
 
     /**
@@ -24,7 +24,7 @@ class ToolController extends Controller
      */
     public function create()
     {
-        //
+        return view('tools.create');
     }
 
     /**
