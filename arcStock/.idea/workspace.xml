@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09fb429c-366a-443e-a2e6-7799bfa01684" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ToolRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ToolRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tools/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tools/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tools/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tools/list.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="09fb429c-366a-443e-a2e6-7799bfa01684" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
