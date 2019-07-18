@@ -15,7 +15,19 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->timestamp('created_at');
+            $table->unsignedBigInteger("tool_id");
+            $table->unsignedBigInteger("person_id");
+            $table->boolean("isOver");
+
+            // Foreign key
+            $table->foreign('tool_id')
+                ->references('id')
+                ->on('tools');
+
+            $table->foreign('person_id')
+                ->references('id')
+                ->on('persons');
         });
     }
 
@@ -26,6 +38,10 @@ class CreateLocationsTable extends Migration
      */
     public function down()
     {
+        Schema::table('sectors', function (Blueprint $table) {
+            $table->dropForeign('tool_id');
+            $table->dropForeign('person_id');
+        });
         Schema::dropIfExists('locations');
     }
 }

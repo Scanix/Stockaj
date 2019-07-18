@@ -16,7 +16,7 @@ class CreateToolsTable extends Migration
         Schema::create('tools', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('type');
+            $table->set('type', ['unique', 'disposable']);
             $table->integer('number');
         });
     }
