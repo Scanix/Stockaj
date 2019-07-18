@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ToolRequest;
-use App\Tool;
+use App\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
-class ToolController extends Controller
+class PersonController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -30,14 +29,14 @@ class ToolController extends Controller
 
         if(isset($order))
         {
-            $tools = Tool::orderBy($order)->paginate(15);
+            $persons = Person::orderBy($order)->paginate(15);
         }
         else
         {
-            $tools = Tool::paginate(15);
+            $persons = Person::paginate(15);
         }
 
-        return view('tools.list')->with('tools', $tools);
+        return view('persons.list')->with('persons', $persons);
     }
 
     /**
@@ -47,7 +46,7 @@ class ToolController extends Controller
      */
     public function create()
     {
-        return view('tools.create');
+        //
     }
 
     /**
@@ -56,23 +55,18 @@ class ToolController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ToolRequest $request)
+    public function store(Request $request)
     {
-        $tool = new Tool;
-        $tool->name = $request->input('name');
-        $tool->type = $request->input('type');
-        $tool->number = $request->input('number');
-        $tool->save();
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Tool  $tool
+     * @param  \App\Person  $person
      * @return \Illuminate\Http\Response
      */
-    public function show(Tool $tool)
+    public function show(Person $person)
     {
         //
     }
@@ -80,10 +74,10 @@ class ToolController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Tool  $tool
+     * @param  \App\Person  $person
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tool $tool)
+    public function edit(Person $person)
     {
         //
     }
@@ -92,10 +86,10 @@ class ToolController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tool  $tool
+     * @param  \App\Person  $person
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tool $tool)
+    public function update(Request $request, Person $person)
     {
         //
     }
@@ -103,10 +97,10 @@ class ToolController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Tool  $tool
+     * @param  \App\Person  $person
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tool $tool)
+    public function destroy(Person $person)
     {
         //
     }
