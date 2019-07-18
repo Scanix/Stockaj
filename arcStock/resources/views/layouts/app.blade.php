@@ -43,11 +43,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -60,6 +55,20 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+
+                                    @if(Auth::user()->admin)
+                                    <a class="dropdown-item" href="{{ route('register') }}">
+                                        {{ __('Add user') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('persons.index') }}">
+                                        {{ __('Persons list') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('tools.index') }}">
+                                        {{ __('Tools list') }}
+                                    </a>
+                                    @endif
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
