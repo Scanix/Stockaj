@@ -24,7 +24,9 @@ class LocationController extends Controller
      */
     public function index()
     {
-        //
+        $locations = Location::all();
+
+        return view('locations.list')->with('locations', $locations);
     }
 
     /**
