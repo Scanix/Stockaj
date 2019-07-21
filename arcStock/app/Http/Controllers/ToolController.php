@@ -63,7 +63,6 @@ class ToolController extends Controller
         $tool->type = $request->input('type');
         $tool->number = $request->input('number');
         $tool->save();
-
     }
 
     /**
