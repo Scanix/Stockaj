@@ -13,7 +13,7 @@ class LocationRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,21 @@ class LocationRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'tool_id' => 'required',
+            'person_id' => 'required',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'tool_id.required' => 'A tool is required',
+            'person_id.unique' => 'The person is required',
         ];
     }
 }

@@ -11,6 +11,14 @@ class Person extends Model
     public  $timestamps = false;
 
     /**
+     * Get the locations of the person
+     */
+    public function locations()
+    {
+        return $this->hasMany('App\Location')->orderBy('created_at', 'desc');
+    }
+
+    /**
      * Get the sector of the person.
      */
     public function sector()

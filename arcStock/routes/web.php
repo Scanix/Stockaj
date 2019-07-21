@@ -13,8 +13,14 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'LocationController@index');
 
 Route::resource('tools', 'ToolController');
-Route::resource('locations', 'LocationController');
+Route::resource('locations', 'LocationController')->except([
+    'index',
+    'create',
+    'edit',
+    'show',
+    'destroy'
+]);
 Route::resource('persons', 'PersonController');
