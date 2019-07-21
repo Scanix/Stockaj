@@ -68,7 +68,7 @@ class PersonController extends Controller
      */
     public function show(Person $person)
     {
-        //
+        return view('persons.unique')->with('person', $person);
     }
 
     /**
