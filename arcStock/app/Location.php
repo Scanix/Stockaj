@@ -15,7 +15,7 @@ class Location extends Model
      */
     public function person()
     {
-        return $this->hasOne('App\Person');
+        return $this->belongsTo('App\Person');
     }
 
     /**
@@ -23,6 +23,6 @@ class Location extends Model
      */
     public function tool()
     {
-        return $this->hasOne('App\Tool');
+        return $this->belongsTo('App\Tool');
     }
 }
