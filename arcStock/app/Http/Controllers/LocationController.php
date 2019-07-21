@@ -25,19 +25,10 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $locations = Location::whereDate('created_at', Carbon::today())->get();
+        $locations = Location::whereDate('created_at', Carbon::today())->orderBy('created_at', 'desc')->get();
+        $oldLocations = Location::where('created_at', '<' , Carbon::today())->where('isOver', false)->orderBy('created_at', 'desc')->get();
 
-        return view('locations.list')->with('locations', $locations);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('locations.list')->with('locations', $locations)->with('oldLocations', $oldLocations);
     }
 
     /**
