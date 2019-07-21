@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Location;
+use App\Person;
+use App\Tool;
+use App\Http\Requests\LocationRequest;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class LocationController extends Controller
 {
@@ -58,7 +62,10 @@ class LocationController extends Controller
      */
     public function update(Request $request, Location $location)
     {
-        //
+        $location->isOver = 1;
+        $location->save();
+
+        return back();
     }
 
     /**
