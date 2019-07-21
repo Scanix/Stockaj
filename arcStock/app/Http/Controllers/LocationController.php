@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Location;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class LocationController extends Controller
 {
@@ -24,7 +25,7 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $locations = Location::all();
+        $locations = Location::whereDate('created_at', Carbon::today())->get();
 
         return view('locations.list')->with('locations', $locations);
     }
