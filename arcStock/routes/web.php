@@ -13,8 +13,8 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+//Route::get('/', 'HomeController@index');
 
 Route::resource('tools', 'ToolController');
-Route::resource('locations', 'LocationController');
+Route::resource('/', 'LocationController');
 Route::resource('persons', 'PersonController');
