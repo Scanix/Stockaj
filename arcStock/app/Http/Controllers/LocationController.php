@@ -37,31 +37,16 @@ class LocationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LocationRequest $request)
     {
-        //
-    }
+        $location = new Location;
+        $location->created_at = now();
+        $location->tool_id = $request->input('tool_id');
+        $location->person_id = $request->input('person_id');
+        $location->isOver = false;
+        $location->save();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Location  $location
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Location $location)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Location  $location
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Location $location)
-    {
-        //
+        return back();
     }
 
     /**
