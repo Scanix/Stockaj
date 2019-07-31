@@ -14,6 +14,14 @@
 Auth::routes();
 
 Route::get('/', 'LocationController@index');
+Route::get('reports',[
+    'as' => 'reports',
+    'uses' => 'ReportController@index',
+]);
+Route::get('reports/{day}', [
+    'as' => 'reports.show',
+    'uses' => 'ReportController@show',
+]);
 
 Route::resource('tools', 'ToolController');
 Route::resource('locations', 'LocationController')->except([

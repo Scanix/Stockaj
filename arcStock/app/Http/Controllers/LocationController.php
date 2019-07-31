@@ -32,7 +32,7 @@ class LocationController extends Controller
         $locations = Location::whereDate('created_at', Carbon::today())->orderBy('created_at', 'desc')->get();
         $oldLocations = Location::where('created_at', '<' , Carbon::today())->where('isOver', false)->orderBy('created_at', 'desc')->get();
 
-        return view('locations.list')->with('locations', $locations)->with('oldLocations', $oldLocations);
+        return view('locations.list')->with('locations', $locations)->with('oldLocations', $oldLocations)->with('add', true);
     }
 
     /**
