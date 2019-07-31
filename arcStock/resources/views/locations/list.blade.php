@@ -8,23 +8,25 @@
                     <div class="card-header">{{ __('Daily opened locations list') }}</div>
 
                     <div class="card-body">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>{{ __('Created at') }}</th>
-                                <th>{{ __('Tool') }}</th>
-                                <th>{{ __('Person') }}</th>
-                                <th>{{ __('Is over') }}</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @isset($add)
-                                @include('locations.createInline')
-                            @endisset
-                            @each('locations.tableLine', $locations, 'location')
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>{{ __('Created at') }}</th>
+                                        <th>{{ __('Tool') }}</th>
+                                        <th>{{ __('Person') }}</th>
+                                        <th>{{ __('Is over') }}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @isset($add)
+                                    @include('locations.createInline')
+                                @endisset
+                                @each('locations.tableLine', $locations, 'location')
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
@@ -33,20 +35,22 @@
                     <div class="card-header">{{ __('Always opened and old locations list') }}</div>
 
                     <div class="card-body">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>{{ __('Created at') }}</th>
-                                <th>{{ __('Tool') }}</th>
-                                <th>{{ __('Person') }}</th>
-                                <th>{{ __('Is over') }}</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @each('locations.tableLine', $oldLocations, 'location')
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>{{ __('Created at') }}</th>
+                                        <th>{{ __('Tool') }}</th>
+                                        <th>{{ __('Person') }}</th>
+                                        <th>{{ __('Is over') }}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @each('locations.tableLine', $oldLocations, 'location')
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 @endisset
