@@ -70,6 +70,9 @@
                                     <a class="dropdown-item" href="{{ route('tools.index') }}">
                                         {{ __('Tools list') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('reports') }}">
+                                        {{ __('Reports list') }}
+                                    </a>
                                     @endif
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
