@@ -21,6 +21,7 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @include('tools.createInline')
                             @each('tools.tableLine', $tools, 'tool')
                             </tbody>
                         </table>
