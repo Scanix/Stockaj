@@ -15,9 +15,11 @@
                                     <th>{{ __('Name') }}</th>
                                     <th>{{ __('Sector') }}</th>
                                     <th>{{ __('Is responsible') }}</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @include('persons.createInline')
                             @each('persons.tableLine', $persons, 'person')
                             </tbody>
                         </table>

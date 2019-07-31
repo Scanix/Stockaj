@@ -5,7 +5,7 @@
         <td>
             <select id="tool_id" name="tool_id" class="form-control" style='width: 100%;' required>
                 @foreach(\App\Tool::orderBy('name')->get() as $tool)
-                    <option value="{{ $tool->id }}">{{ $tool->name }} <span>{{ $tool->availableQuantity() }}</span> </option>
+                    <option value="{{ $tool->id }}">{{ $tool->name }} ({{ $tool->availableQuantity() }})</option>
                 @endforeach
             </select>
         </td>
@@ -16,7 +16,7 @@
             @else
             <select id="person_id" name="person_id" class="form-control" style='width: 100%;' required>
                 @foreach(\App\Person::orderBy('name')->get() as $person)
-                    <option value="{{ $person->id }}">{{ $person->name }} <span>{{ $person->sector->name }}</span> </option>
+                    <option value="{{ $person->id }}">{{ $person->name }} ({{ $person->sector->name }})</option>
                 @endforeach
             </select>
             @endif
