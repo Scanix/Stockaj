@@ -19,13 +19,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @include('locations.createInline')
+                            @isset($add)
+                                @include('locations.createInline')
+                            @endisset
                             @each('locations.tableLine', $locations, 'location')
                             </tbody>
                         </table>
                     </div>
                 </div>
 
+                @isset($oldLocations)
                 <div class="card">
                     <div class="card-header">{{ __('Always opened and old locations list') }}</div>
 
@@ -46,6 +49,7 @@
                         </table>
                     </div>
                 </div>
+                @endisset
             </div>
         </div>
     </div>
