@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-bordered table-striped">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th>{{ __('Day') }}</th>

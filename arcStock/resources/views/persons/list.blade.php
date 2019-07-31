@@ -9,10 +9,9 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-bordered table-striped">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th>#</th>
                                         <th>{{ __('Name') }}</th>
                                         <th>{{ __('Sector') }}</th>
                                         <th>{{ __('Is responsible') }}</th>
@@ -26,7 +25,9 @@
                             </table>
                         </div>
 
-                        {{ $persons->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
+                        <div class="d-flex justify-content-center">
+                            {{ $persons->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
