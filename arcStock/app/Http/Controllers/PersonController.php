@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PersonRequest;
 use App\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -52,12 +53,18 @@ class PersonController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  PersonRequest  $request
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(PersonRequest $request)
     {
-        //
+        $person = new Person;
+        $person->name = $request->input('name');
+        $person->sector_id = $request->input('sector_id');
+        $person->isResponsible = $request->has('isResponsible');
+        $person->save();
+
+        return back();
     }
 
     /**
