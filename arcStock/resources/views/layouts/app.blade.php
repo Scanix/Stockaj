@@ -84,6 +84,13 @@
         </nav>
 
         <main class="py-4">
+            @if (\Session::has('error'))
+                <div class="container">
+                    <div class="alert alert-danger">
+                        <strong>Error!</strong> {!! Session::get('error') !!}
+                    </div>
+                </div>
+            @endif
             @yield('content')
         </main>
     </div>
