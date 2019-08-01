@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Opened locations of the person') }}</div>
+                    <div class="card-header">{{ __('Opened locations of the tool') }}</div>
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header">{{ __('Closed locations of the person') }}</div>
+                    <div class="card-header">{{ __('Closed locations of the tool') }}</div>
 
                     <div class="card-body">
                         <div class="table-responsive">

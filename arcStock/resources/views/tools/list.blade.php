@@ -8,7 +8,6 @@
                 <div class="card-header">{{ __('Tools list') }}</div>
 
                 <div class="card-body">
-                    <div>
                     <form method="GET" role="search">
                         <div class="form-group">
                             <div class="input-group">
@@ -21,7 +20,6 @@
                             </div>
                         </div>
                     </form>
-                    </div>
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped">
                             <thead class="thead-dark">
