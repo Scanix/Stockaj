@@ -1,6 +1,6 @@
 <tr>
     <td>{{ \Carbon\Carbon::parse($location->created_at)->toDayDateTimeString() }}</td>
-    <td><a href="{{ route('persons.show', ['tool' => $location->tool->id]) }}">{{ $location->tool->name }}</a></td>
+    <td><a href="{{ route('tools.show', ['tool' => $location->tool->id]) }}">{{ $location->tool->name }}</a></td>
     <td><a href="{{ route('persons.show', ['person' => $location->person->id]) }}">{{ $location->person->name }}</a></td>
     <td>{{ $location->isOver }}</td>
     <td>

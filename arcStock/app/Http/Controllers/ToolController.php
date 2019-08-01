@@ -63,6 +63,8 @@ class ToolController extends Controller
         $tool->type = $request->input('type');
         $tool->number = $request->input('number');
         $tool->save();
+
+        return back();
     }
 
     /**
@@ -96,7 +98,10 @@ class ToolController extends Controller
      */
     public function update(Request $request, Tool $tool)
     {
-        //
+        $tool->number = $tool->number + $request->input('add');
+        $tool->save();
+
+        return back();
     }
 
     /**

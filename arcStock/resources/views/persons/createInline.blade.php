@@ -1,7 +1,6 @@
 <tr>
     <form method="POST" action="{{ route('persons.store') }}">
         @csrf
-        <td></td>
         <td>
             <input id="name" name="name" class="form-control" required type="text">
         </td>

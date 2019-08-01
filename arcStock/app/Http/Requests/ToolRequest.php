@@ -25,7 +25,7 @@ class ToolRequest extends FormRequest
     {
         return [
             'name' => 'required|unique:tools',
-            'type' => 'required|numeric|min:0|max:2',
+            'type' => 'required',
             'number' => 'required|numeric'
         ];
     }

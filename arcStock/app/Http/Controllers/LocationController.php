@@ -43,14 +43,36 @@ class LocationController extends Controller
      */
     public function store(LocationRequest $request)
     {
+        // Find the tool to find if he is unique or disposable
+        $tool = Tool::find($request->input('tool_id'));
+
+        // If there is no more tool return with error link to the tool
+        if($tool->availableQuantity() == 0)
+        {
+            return back()->with('error', 'No more ' . '<a href="' . route('tools.show', ['tool' => $tool->id]) . '">' . $tool->name . '</a>');
+        }
+
         $location = new Location;
         $location->created_at = now();
         $location->tool_id = $request->input('tool_id');
         $location->person_id = $request->input('person_id');
         $location->isOver = false;
-        $location->save();
 
-        return back();
+        if($tool->type == 'disposable')
+        {
+            $location->isOver = true;
+            $tool->number = $tool->number - 1;
+        }
+
+        $saved = $location->save();
+
+        if($saved) {
+            $tool->save();
+        } else {
+            return abort(500);
+        }
+
+        return back()->with('success', 'Location added');
     }
 
     /**

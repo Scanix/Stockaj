@@ -8,24 +8,29 @@
                 <div class="card-header">{{ __('Tools list') }}</div>
 
                 <div class="card-body">
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>{{ __('Name') }}</th>
-                            <th>{{ __('Type') }}</th>
-                            <th>{{ __('Quantity') }}</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @each('tools.tableLine', $tools, 'tool')
-                        </tbody>
-                    </table>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>{{ __('Name') }}</th>
+                                    <th>{{ __('Type') }}</th>
+                                    <th>{{ __('Quantity') }}</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @include('tools.createInline')
+                            @each('tools.tableLine', $tools, 'tool')
+                            </tbody>
+                        </table>
+                    </div>
 
-                    {{ $tools->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
-                    <a href="{{ route('tools.create') }}"><button class="btn btn-block">{{ __('Add tool') }}</button></a>
+                    <div class="d-flex justify-content-center">
+                        {{ $tools->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
+                    </div>
                 </div>
             </div>
         </div>

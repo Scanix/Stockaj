@@ -8,23 +8,26 @@
                     <div class="card-header">{{ __('Persons list') }}</div>
 
                     <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>{{ __('Name') }}</th>
-                                    <th>{{ __('Sector') }}</th>
-                                    <th>{{ __('Is responsible') }}</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            @include('persons.createInline')
-                            @each('persons.tableLine', $persons, 'person')
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>{{ __('Name') }}</th>
+                                        <th>{{ __('Sector') }}</th>
+                                        <th>{{ __('Is responsible') }}</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @include('persons.createInline')
+                                @each('persons.tableLine', $persons, 'person')
+                                </tbody>
+                            </table>
+                        </div>
 
-                        {{ $persons->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
+                        <div class="d-flex justify-content-center">
+                            {{ $persons->appends(['order' => \Illuminate\Support\Facades\Input::get('order')])->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
