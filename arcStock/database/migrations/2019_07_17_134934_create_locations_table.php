@@ -15,12 +15,12 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('updated_at');
-            $table->timestamp('created_at');
-            $table->unsignedBigInteger("tool_id");
-            $table->unsignedBigInteger("person_id");
-            $table->boolean("isOver")
-                ->default('false');
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
+            $table->unsignedBigInteger('tool_id');
+            $table->unsignedBigInteger('person_id');
+            $table->boolean('isOver')
+                ->default(false);
 
             // Foreign key
             $table->foreign('tool_id')
