@@ -46,6 +46,12 @@ class LocationController extends Controller
         // Find the tool to find if he is unique or disposable
         $tool = Tool::find($request->input('tool_id'));
 
+        // If there is no more tool return with error link to the tool
+        if($tool->availableQuantity() == 0)
+        {
+            return back()->with('error', 'No more ' . '<a href="' . route('tools.show', ['tool' => $tool->id]) . '">' . $tool->name . '</a>');
+        }
+
         $location = new Location;
         $location->created_at = now();
         $location->tool_id = $request->input('tool_id');
@@ -66,7 +72,7 @@ class LocationController extends Controller
             return abort(500);
         }
 
-        return back();
+        return back()->with('success', 'Location added');
     }
 
     /**
