@@ -75,7 +75,7 @@ class ToolController extends Controller
      */
     public function show(Tool $tool)
     {
-        //
+        return view('tools.unique')->with('tool', $tool);
     }
 
     /**

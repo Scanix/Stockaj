@@ -20,8 +20,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @include('locations.createInline', ['uniquePerson' => $person])
-                                @each('locations.tableLine', $person->locations->where('isOver', false), 'location')
+                                @include('locations.createInline', ['uniqueTool' => $tool])
+                                @each('locations.tableLine', $tool->locations->where('isOver', false), 'location')
                                 </tbody>
                             </table>
                         </div>
@@ -44,7 +44,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @each('locations.tableLine', $person->locations->where('isOver', true), 'location')
+                                @each('locations.tableLine', $tool->locations->where('isOver', true), 'location')
                                 </tbody>
                             </table>
                         </div>
