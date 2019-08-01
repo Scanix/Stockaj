@@ -81,6 +81,7 @@
                                     </form>
                                 </div>
                             </li>
+                            @include('layouts.notifications')
                         @endguest
                     </ul>
                 </div>
@@ -93,5 +94,6 @@
         </main>
     </div>
     @yield('scripts')
+    @stack('scripts')
 </body>
 </html>
