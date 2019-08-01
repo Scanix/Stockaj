@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Location;
-use App\Person;
+use App\Notifications\RefillDisposable;
 use App\Tool;
 use App\Http\Requests\LocationRequest;
+use App\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Notification;
 
 class LocationController extends Controller
 {
@@ -62,6 +63,11 @@ class LocationController extends Controller
         {
             $location->isOver = true;
             $tool->number = $tool->number - 1;
+
+            if($tool->number < 10)
+            {
+                Notification::send(User::all(), new RefillDisposable($tool));
+            }
         }
 
         $saved = $location->save();
