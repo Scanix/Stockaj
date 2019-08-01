@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="09fb429c-366a-443e-a2e6-7799bfa01684" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ToolRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ToolRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locations/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locations/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/locations/tableLine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/locations/tableLine.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/persons/createInline.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/persons/createInline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/persons/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/persons/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/persons/tableLine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/persons/tableLine.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/persons/unique.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/persons/unique.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/reports/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/reports/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tools/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tools/createInline.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tools/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tools/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tools/tableLine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tools/tableLine.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +54,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/tools/tableLine.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -132,11 +121,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LocationController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="680">
-                  <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="22" />
+                <state relative-caret-position="714">
+                  <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
                   <folding>
                     <element signature="e#40#57#0#PHP" expanded="true" />
                   </folding>
@@ -153,7 +142,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ToolController.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="579">
@@ -204,7 +193,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/tools/create.blade.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="800">
+                <state relative-caret-position="647">
                   <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
                 </state>
               </provider>
@@ -289,7 +278,6 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/PersonRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PersonController.php" />
         <option value="$PROJECT_DIR$/resources/views/locations/createInline.blade.php" />
@@ -302,10 +290,11 @@
         <option value="$PROJECT_DIR$/resources/views/persons/createInline.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/persons/list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/persons/tableLine.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/tools/tableLine.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ToolRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/tools/list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" />
+        <option value="$PROJECT_DIR$/resources/views/tools/tableLine.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LocationController.php" />
       </list>
     </option>
   </component>
@@ -642,7 +631,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63292000" />
+    <option name="totallyTimeSpent" value="64968000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -974,20 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tools/createInline.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/persons/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/persons/tableLine.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1009,27 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tools/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Tool.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="72" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LocationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,10 +998,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ToolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="e#40#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tools/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tools/createInline.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tools/tableLine.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/persons/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1054,12 +1043,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ToolController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LocationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="714">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding>
-            <element signature="e#40#74#0#PHP" expanded="true" />
+            <element signature="e#40#57#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
