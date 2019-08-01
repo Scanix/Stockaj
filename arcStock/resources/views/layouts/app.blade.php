@@ -81,6 +81,7 @@
                                     </form>
                                 </div>
                             </li>
+                            @include('layouts.notifications')
                         @endguest
                     </ul>
                 </div>
