@@ -14,6 +14,10 @@
 Auth::routes();
 
 Route::get('/', 'LocationController@index');
+Route::get('notifications', [
+    'as' => 'notifications',
+    'uses' => 'NotificationController@all',
+]);
 Route::get('reports',[
     'as' => 'reports',
     'uses' => 'ReportController@index',
