@@ -25,24 +25,11 @@ class ToolController extends Controller
      */
     public function index()
     {
-        $order = Input::get('order');
-        $search = Input::get('search');
+        $order = Input::get('order', 'name');
+        $search = Input::get('search', '');
+        $way = Input::get('way', 'asc');
 
-        if(isset($search))
-        {
-            $tools = Tool::where('name', 'like', '%'.$search.'%')->paginate(15);
-        }
-        else
-        {
-            if(isset($order))
-            {
-                $tools = Tool::orderBy($order)->paginate(15);
-            }
-            else
-            {
-                $tools = Tool::paginate(15);
-            }
-        }
+        $tools = Tool::where('name', 'like', '%'.$search.'%')->orderBy($order, $way)->paginate(15);
 
         return view('tools.list')->with('tools', $tools);
     }

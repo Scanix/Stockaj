@@ -26,24 +26,11 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $order = Input::get('order');
-        $search = Input::get('search');
+        $order = Input::get('order', 'name');
+        $search = Input::get('search', '');
+        $way = Input::get('way', 'asc');
 
-        if(isset($search))
-        {
-            $persons = Person::where('name', 'like', '%'.$search.'%')->paginate(15);
-        }
-        else
-        {
-            if (isset($order))
-            {
-                $persons = Person::orderBy($order)->paginate(15);
-            }
-            else
-            {
-                $persons = Person::paginate(15);
-            }
-        }
+        $persons = Person::where('name', 'like', '%'.$search.'%')->orderBy($order, $way)->paginate(15);
 
         return view('persons.list')->with('persons', $persons);
     }
