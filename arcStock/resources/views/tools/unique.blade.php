@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Opened locations of the person') }}</div>
+                    <div class="card-header">{{ __('Opened locations of the tool') }}</div>
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -20,8 +20,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @include('locations.createInline', ['uniquePerson' => $person])
-                                @each('locations.tableLine', $person->locations->where('isOver', false), 'location')
+                                @include('locations.createInline', ['uniqueTool' => $tool])
+                                @each('locations.tableLine', $tool->locations->where('isOver', false), 'location')
                                 </tbody>
                             </table>
                         </div>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header">{{ __('Closed locations of the person') }}</div>
+                    <div class="card-header">{{ __('Closed locations of the tool') }}</div>
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -44,7 +44,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @each('locations.tableLine', $person->locations->where('isOver', true), 'location')
+                                @each('locations.tableLine', $tool->locations->where('isOver', true), 'location')
                                 </tbody>
                             </table>
                         </div>

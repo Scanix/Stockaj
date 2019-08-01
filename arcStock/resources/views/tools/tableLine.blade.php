@@ -1,5 +1,5 @@
 <tr>
-    <td>{{ $tool->name }}</td>
+    <td><a href="{{ route('tools.show', ['tool' => $tool->id]) }}">{{ $tool->name }}</a></td>
     <td>{{ $tool->type }}</td>
     <td>{{ $tool->number }}</td>
     <td>

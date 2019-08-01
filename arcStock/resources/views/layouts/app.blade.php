@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Arc-Stock') }}</title>
 
     <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/24fb1f2666.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->

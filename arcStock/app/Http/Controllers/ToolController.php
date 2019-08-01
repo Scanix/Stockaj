@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ToolRequest;
 use App\Tool;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -26,16 +25,11 @@ class ToolController extends Controller
      */
     public function index()
     {
-        $order = Input::get('order');
+        $order = Input::get('order', 'name');
+        $search = Input::get('search', '');
+        $way = Input::get('way', 'asc');
 
-        if(isset($order))
-        {
-            $tools = Tool::orderBy($order)->paginate(15);
-        }
-        else
-        {
-            $tools = Tool::paginate(15);
-        }
+        $tools = Tool::where('name', 'like', '%'.$search.'%')->orderBy($order, $way)->paginate(15);
 
         return view('tools.list')->with('tools', $tools);
     }
@@ -75,7 +69,7 @@ class ToolController extends Controller
      */
     public function show(Tool $tool)
     {
-        //
+        return view('tools.unique')->with('tool', $tool);
     }
 
     /**
