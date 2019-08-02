@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Arc-Stock') }}</title>
+    <title>{{ config('app.name', 'Arc-Stock') }} - @yield('page_title', 'Home')</title>
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/24fb1f2666.js"></script>
