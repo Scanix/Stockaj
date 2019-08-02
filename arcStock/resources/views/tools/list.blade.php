@@ -6,6 +6,10 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
+            <div class="container">
+                <h1 class="mt-3">{{ __('Tools') }}</h1>
+                <p class="lead">Here you can add new tool and select one.</p>
+            </div>
             <div class="card">
                 <div class="card-header">{{ __('Tools list') }}</div>
 

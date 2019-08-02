@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header">{{ __('Closed locations of the person') }}</div>
 
                     <div class="card-body">

@@ -6,8 +6,12 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                <div class="container">
+                    <h1 class="mt-3">{{ __('Locations') }}</h1>
+                    <p class="lead">Here you can register new locations for the tools.</p>
+                </div>
                 <div class="card">
-                    <div class="card-header">{{ __('Daily opened locations list') }}</div>
+                    <div class="card-header">{{ __('Daily locations list') }}</div>
 
                     <div class="card-body">
                         <div class="table-responsive">
@@ -33,7 +37,7 @@
                 </div>
 
                 @isset($oldLocations)
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header">{{ __('Always opened and old locations list') }}</div>
 
                     <div class="card-body">
