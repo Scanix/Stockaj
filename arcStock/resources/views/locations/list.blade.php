@@ -20,6 +20,7 @@
                                     <tr>
                                         <th>{{ __('Created at') }}</th>
                                         <th>{{ __('Tool') }}</th>
+                                        <th>{{ __('Quantity') }}</th>
                                         <th>{{ __('Person') }}</th>
                                         <th>{{ __('Is over') }}</th>
                                         <th></th>

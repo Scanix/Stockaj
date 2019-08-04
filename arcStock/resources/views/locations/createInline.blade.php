@@ -15,6 +15,9 @@
             @endif
         </td>
         <td>
+            <input id="quantity" name="quantity" class="form-control" type="number" value="1">
+        </td>
+        <td>
             @if(isset($uniquePerson))
                 {{ $uniquePerson->name }}
                 <input id="person_id" name="person_id" type="hidden" value="{{ $uniquePerson->id }}">

@@ -56,13 +56,14 @@ class LocationController extends Controller
         $location = new Location;
         $location->created_at = now();
         $location->tool_id = $request->input('tool_id');
+        $location->quantity = $request->input('quantity');
         $location->person_id = $request->input('person_id');
         $location->isOver = false;
 
         if($tool->type == 'disposable')
         {
             $location->isOver = true;
-            $tool->number = $tool->number - 1;
+            $tool->number = $tool->number - $request->input('quantity');
 
             if($tool->number < 10)
             {
