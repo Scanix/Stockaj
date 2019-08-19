@@ -29,7 +29,13 @@ class Tool extends Model
 
         if($this->type == 'unique')
         {
-            $totalOpenedLocation = $this->locations()->where('isOver', 'false')->count();
+            $openedLocations =  $this->locations()->where('isOver', 'false')->get();
+            $totalOpenedLocation = 0;
+
+            foreach ($openedLocations as $openedLocation)
+            {
+                $totalOpenedLocation += $openedLocation->quantity;
+            }
         }
 
         return $this->number - $totalOpenedLocation;

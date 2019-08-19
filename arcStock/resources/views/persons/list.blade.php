@@ -1,9 +1,15 @@
 @extends('layouts.app')
-
+@section('page_title')
+    {{ __('Persons') }}
+@endsection
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
+                <div class="container">
+                    <h1 class="mt-3">{{ __('Persons') }}</h1>
+                    <p class="lead">Here you can add new person and select one.</p>
+                </div>
                 <div class="card">
                     <div class="card-header">{{ __('Persons list') }}</div>
 

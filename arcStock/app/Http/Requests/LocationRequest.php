@@ -26,6 +26,7 @@ class LocationRequest extends FormRequest
         return [
             'tool_id' => 'required',
             'person_id' => 'required',
+            'quantity' => 'required|numeric'
         ];
     }
 

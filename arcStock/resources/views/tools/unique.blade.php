@@ -14,6 +14,7 @@
                                 <tr>
                                     <th>{{ __('Created at') }}</th>
                                     <th>{{ __('Tool') }}</th>
+                                    <th>{{ __('Quantity') }}</th>
                                     <th>{{ __('Person') }}</th>
                                     <th>{{ __('Is over') }}</th>
                                     <th></th>
@@ -28,7 +29,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header">{{ __('Closed locations of the tool') }}</div>
 
                     <div class="card-body">
@@ -38,6 +39,7 @@
                                 <tr>
                                     <th>{{ __('Created at') }}</th>
                                     <th>{{ __('Tool') }}</th>
+                                    <th>{{ __('Quantity') }}</th>
                                     <th>{{ __('Person') }}</th>
                                     <th>{{ __('Is over') }}</th>
                                     <th></th>
